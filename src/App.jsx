@@ -21,6 +21,7 @@ function App() {
   const observerTarget = useRef(null);
   //const hasMore=true;
   const pokemons=useSelector((state)=>state.pokemons.pokemons)
+  const k=fetchApiforPokemonIds(0);
 
   function gettingresults(hello,results){
     if(hello==='ability'){

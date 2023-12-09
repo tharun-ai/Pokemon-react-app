@@ -6,7 +6,6 @@ function fetchApiforPokemonIds( page) {
   const [data, setData] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const dispatcher=useDispatch();
-  const [kage,setKage]=useState(page)
   useEffect(() => {
       console.log(page);
         fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${page}&limit=${20}`).then(
@@ -16,7 +15,7 @@ function fetchApiforPokemonIds( page) {
       )
       
     }
-    , [kage]);
+    , [page]);
 
   return [hasMore ];
 }
