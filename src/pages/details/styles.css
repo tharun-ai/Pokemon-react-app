@@ -1,0 +1,26 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* background-color: red;  */
+    gap: 10px;
+    margin: 2%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr); 
+      gap: 10px;
+      margin: 2%;
+    }
+  }
+
+  @media only screen and  (min-device-width: 601px) and (max-width: 800px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      /* background-color: red;  */
+      gap: 10px;
+      margin: 2%;
+    }
+  }

@@ -1,0 +1,27 @@
+.card{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    border:2px solid black;
+    height: auto;
+    border-radius: 10px;
+}
+img{
+    object-fit: contain;
+    height: 150px;
+    flex: 1.2;
+}
+.card-detail{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+}
+p{
+    font-size: 18px;
+}
+.card:hover{
+    cursor: pointer;
+}
