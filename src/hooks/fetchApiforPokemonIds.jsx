@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {addMovies} from '../store/pokemonReducer'
 import { useDispatch } from 'react-redux';
 
-function fetchApiforPokemonIds( page) {
+function useFetchApiforPokemonIds( page) {
   const [data, setData] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const dispatcher=useDispatch();
@@ -20,4 +20,4 @@ function fetchApiforPokemonIds( page) {
   return [hasMore ];
 }
 
-export default fetchApiforPokemonIds;
+export default useFetchApiforPokemonIds;
