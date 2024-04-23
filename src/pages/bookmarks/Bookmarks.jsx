@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import "./styles.css"
-import Bookmarkcard from './bookmarkcard'
+import Bookmarkcard from './Bookmarkcard'
 function Bookmarks() {
   const bookmarks = useSelector((state) => state.pokemons.bookmarks)
   return (
