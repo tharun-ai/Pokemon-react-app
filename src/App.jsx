@@ -4,7 +4,7 @@
   import './App.css'
   import Dropdown from './components/dropdown/Dropdown'
   import fetchApi from './hooks/fetchApi'
-  import Details from './pages/Details/Details'
+  import Details from './pages/details/Details'
   import { Provider, useSelector } from 'react-redux'
   import store from './store/store'
   import Bookmarks from './pages/bookmarks/Bookmarks'
