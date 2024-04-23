@@ -10,9 +10,9 @@ function Details({pokemons=[]}) {
     <div className='grid-container'>
       {
         pokemons.map((pokemon,index)=>{
-          return( <div key={index}>
+          return( 
                <Cards key={index} url={pokemon.url} ></Cards>
-          </div>)
+          )
         })
       }
     </div>

@@ -16,11 +16,15 @@ const pokemonSlicer = createSlice({
     
     'bookmarkPokemon':(state,action)=>{
       if (!Array.isArray(action.payload)) {
-        state.bookmarks.push(action.payload);
+        const isBookmarked = state.bookmarks.some(pokemon => pokemon.name === action.payload.name);
+        if (!isBookmarked) {
+          state.bookmarks.push(action.payload);}
+          else {
+            console.log(`${action.payload.name} is already bookmarked.`);
+        }
       } else {
         console.error('Payload for bookmarkPokemon must be a single object, not an array');
       }
-      console.log(state.bookmarks);
     },
     'removebookmarkPokemon':(state,action)=>{
       //  state.bookmarks.push(action.payload);
@@ -30,7 +34,6 @@ const pokemonSlicer = createSlice({
       } else {
         console.error('Payload for bookmarkPokemon must be a single object, not an array');
       }
-      console.log(state.bookmarks);
     }
   }
 })

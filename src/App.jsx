@@ -62,13 +62,12 @@
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
-          console.log("use effect triggered")
           setPage((prevPage) => {
             const nextPage = prevPage + 20;
             return nextPage;
           });
         },
-        { threshold: 1.0 }
+        { threshold: 0.5 }
       );
 
       if (observerTarget.current) {
@@ -96,24 +95,18 @@
 
     return (
       <> 
-      <Dropdown filterType="species" filterData={species} onDataChange={onDataChange}  ></Dropdown>
-      <Dropdown filterType="Ability" filterData={abilities} onDataChange={onDataChange} ></Dropdown>
-      <Dropdown filterType="Habitat" filterData={habitat} onDataChange={onDataChange} ></Dropdown>
-    
-      { (bookmarks.length == 0) ? (<div>Not Bookmarked Pokemans</div>):(
+      { (bookmarks.length == 0) ? (<></>):(
         
           <div>
-              <h3>Bookmarks</h3>
               <Bookmarks/>
           </div>
       ) 
       
       }
-      <div>
+        <div className='heading'>Pokemon Collection</div>
         <Details pokemons={pokemons}/>
-        <div ref={observerTarget} style={{ height: '50px' }}></div>
-      </div>
-      
+       
+      <div ref={observerTarget} style={{ height: '100px' }}></div>
       
       </>
     )
